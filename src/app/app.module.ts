@@ -108,6 +108,7 @@ import { SquarePipe } from './square.pipe';
     MatSortModule,
     MatTableModule,
     MatTabsModule,
+    
     MatToolbarModule,
     MatFormFieldModule,
     MatButtonToggleModule,
