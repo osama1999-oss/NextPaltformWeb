@@ -1,0 +1,69 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Simple Table</h4>
+                        <p class="card-category"> Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                       User Name
+                                    </th>
+                                    <th>
+                                        PakyGround Name
+                                    </th>
+                                    <th>
+                                        From
+                                    </th>
+                                    <th>
+                                      To
+                                  </th>
+                                  <th>
+                                      Date
+                                  </th>
+                                  <th>
+                                    Status
+                                </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let reseravtion of Reservations; let i = index">
+                                        <td>
+                                            {{i}}
+                                        </td>
+                                        <td>
+                                          {{reseravtion.userName}}
+                                        </td>
+                                        <td>
+                                          {{reseravtion.playGroundName}}
+                                        </td>
+                                        <td>
+                                          {{reseravtion.from}}
+                                        </td>
+                                        <td>
+                                          {{reseravtion.to}}
+                                        </td>
+                                        <td >
+                                          {{reseravtion.date}}
+                                        </td>
+                                        <td >
+                                            {{reseravtion.status}}
+                                          </td>
+                                        <td>
+                                          <button mat-raised-button color="warn" (click)="onBlock(owner.id)" value="{{owner.id}}" >block</button>
+                                      </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  

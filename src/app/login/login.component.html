@@ -1,0 +1,35 @@
+
+<mat-toolbar color="primary" class="app-header">
+    <div><a href="https://www.positronx.io" target="_blank" class="positronx">mala3b</a></div>
+    <span class="nav-tool-items">
+      <a mat-button routerLink="" routerLinkActive="active">Log in</a>
+      
+    </span>
+  </mat-toolbar>
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Log in</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form">
+        <label for=""></label>
+          <input type="text"
+            class="form-control" name="carModel" id="carModel"
+             aria-describedby="hlpModel" [(ngModel)] = "name"   placeholder="">
+          <small id="hlpModel" class="form-text text-muted">Name </small>
+
+          <label for=""></label>
+          <input type="text"
+            class="form-control" name="carModel" id="carModel"
+             aria-describedby="hlpModel" [(ngModel)]="password" placeholder="">
+          <small id="hlpModel" class="form-text text-muted">Password </small>
+        <button class="btn btn-primary" (click)="login()"  >
+          Save
+        </button>
+      </form>
+    </mat-card>
+  
+  </div>
+

@@ -1,0 +1,28 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="content" *ngFor="let playGround of playGrounds; let i = index">
+   <div class="mat-elevation-z4 card-body">
+     <mat-card-header>
+       <h2>playground name:{{playGround.name}}</h2>
+     </mat-card-header>
+     <div class="flex-container">
+       <div>    <img mat-card-image src="./../../assets/close-up-shot-soccer-field-sideline-made-synthetic-lawn-selective-focus-82883321.jpg">
+       </div>
+       <div>
+         <mat-card-content >
+       <ul>
+         <li><h1>email: {{playGround.from}}</h1></li>
+         <li><h1>email: {{playGround.to}}</h1></li>
+         <li><h1>evening price:{{playGround.priceEvening}}</h1></li>
+         <li><h1>morning price:{{playGround.priceMorning}}</h1></li>
+         <li><h1>location:{{playGround.location}}</h1></li>
+       </ul>
+       
+     </mat-card-content>
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+ </div>
+ </div>

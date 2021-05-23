@@ -1,0 +1,21 @@
+.content {
+    padding: 16px;
+  }
+  .content > mat-card {
+    width: 100%;
+    
+  }
+  .flex-container {
+    display: flex;
+    
+    
+  }
+  .flex-container > div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+ .mat-elevation-z4
+ {
+   background-color:white;
+ }
