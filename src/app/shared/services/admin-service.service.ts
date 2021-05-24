@@ -13,6 +13,7 @@ export class AdminServiceService {
   apiAuthenticationUrl=environment.myApi+ 'Authentication/AdminAuthenticate';
   apiAdminUrl=environment.myApi+ 'Admin/';
   apiPlayGroundUrl=environment.myApi+ 'PlayGround/';
+  apiStatisticsUrl=environment.myApi+ 'Statistics/';
  constructor(private http:HttpClient) { }
   login(adminAuthenticationDto: adminAuthenticationDto): Observable<any>{
     return this.http.post(this.apiAuthenticationUrl ,adminAuthenticationDto)
@@ -48,5 +49,11 @@ export class AdminServiceService {
   }
   getPlayGrounds():Observable<any>{
     return this.http.get(this.apiPlayGroundUrl + 'GetAllPlayGrounds')
+  }
+  getStatisticsOfReservations():Observable<any>{
+    return this.http.get(this.apiStatisticsUrl + 'StatisticsOfReservations')
+  }
+  getDailyStatisticsOfReservations():Observable<any>{
+    return this.http.get(this.apiStatisticsUrl + 'DailyStatisticsOfReservations')
   }
 }

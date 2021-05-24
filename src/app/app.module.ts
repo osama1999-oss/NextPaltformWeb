@@ -71,7 +71,6 @@ import { SquarePipe } from './square.pipe';
 
 
 
-
 @NgModule({
   imports: [
     BrowserAnimationsModule,

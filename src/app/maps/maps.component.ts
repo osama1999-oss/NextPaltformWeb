@@ -21,6 +21,7 @@ export class MapsComponent implements OnInit {
         this.adminServ.getCurrentReservations().subscribe(
           res=> {
             this.Reservations = res;
+            console.log(this.Reservations);
           }
         );
       }
