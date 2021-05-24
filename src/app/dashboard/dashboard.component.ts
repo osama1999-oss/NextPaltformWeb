@@ -10,8 +10,14 @@ import { StatisticsOfReservations } from './../shared/model/statisticsOfReservat
 })
 export class DashboardComponent implements OnInit {
 
+  PlayGroundsCount:number;
+  PlayGroundApprovalCount:number;
+  UsersCount:number;
+  OwnersCount:number;
+
   data:StatisticsOfReservations[];
   dailyData:StatisticsOfReservations[];
+  statusData:StatisticsOfReservations[];
   constructor( private adminServ:AdminServiceService) { }
   startAnimationForLineChart(chart) {
     let seq: any, delays: any, durations: any;
@@ -77,6 +83,11 @@ export class DashboardComponent implements OnInit {
 
     this.getStatisticsOfReservations();
     this.getDailyStatisticsOfReservations();
+    this.getPlayGroundStatusStatistics();
+    this.getUsersCount();
+    this.getOwnersCount();
+    this.getPlayGroundApprovalCount();
+    this.getPlayGroundsCount();
 }
   getStatisticsOfReservations()
   {
@@ -164,4 +175,78 @@ export class DashboardComponent implements OnInit {
       }
     );
   }
+  getPlayGroundStatusStatisticsChart()
+  {
+    
+    var datawebsiteViewsChartSt = {
+      labels: [this.statusData[4].name, this.statusData[1].name, this.statusData[2].name, this.statusData[0].name],
+      series: [[this.statusData[4].value, this.statusData[1].value, this.statusData[2].value, this.statusData[0].value]],
+    };
+    var optionswebsiteViewsChartSt = {
+      axisX: {
+        showGrid: false,
+      },
+      low: 0,
+      high: 6,
+      chartPadding: { top: 0, right: 5, bottom: 0, left: 0 },
+    };
+    var responsiveOptions: any[] = [
+      [
+        "screen and (max-width: 640px)",
+        {
+          seriesBarDistance: 8,
+          axisX: {
+            labelInterpolationFnc: function (value) {
+              return value[0];
+            },
+          },
+        },
+      ],
+    ];
+    var websiteViewsChartSt = new Chartist.Bar(
+      "#websiteViewsChartSt",
+      datawebsiteViewsChartSt,
+      optionswebsiteViewsChartSt,
+      responsiveOptions
+    );
+
+    //start animation for the Emails Subscription Chart
+    this.startAnimationForBarChart(websiteViewsChartSt);
+  
+  }
+  getPlayGroundStatusStatistics()
+  {
+    this.adminServ.getPlayGroundStatusStatistics().subscribe(
+      res=>{
+        this.statusData = res;
+        this.getPlayGroundStatusStatisticsChart();
+      }
+    );
+  
+  }
+  getPlayGroundsCount()
+  {
+    this.adminServ.getPlayGroundsCount().subscribe(
+      res=> this.PlayGroundsCount = res
+    )
+  }
+  getPlayGroundApprovalCount()
+  {
+    this.adminServ.getPlayGroundApprovalCount().subscribe(
+      res=> this.PlayGroundApprovalCount = res
+    )
+  }
+  getUsersCount()
+  {
+    this.adminServ.getUsersCount().subscribe(
+      res=> this.UsersCount = res
+    )
+  }
+  getOwnersCount()
+  {
+    this.adminServ.getUsersCount().subscribe(
+      res=> this.OwnersCount = res
+    )
+  }
+
 }

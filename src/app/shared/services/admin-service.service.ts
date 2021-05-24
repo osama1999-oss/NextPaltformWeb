@@ -56,4 +56,29 @@ export class AdminServiceService {
   getDailyStatisticsOfReservations():Observable<any>{
     return this.http.get(this.apiStatisticsUrl + 'DailyStatisticsOfReservations')
   }
+  getPlayGroundStatusStatistics():Observable<any>{
+    return this.http.get(this.apiStatisticsUrl + 'PlayGroundStatusStatistics')
+  }
+  getPlayGroundsCount():Observable<any>{
+    return this.http.get(this.apiStatisticsUrl + 'GetPlayGroundsCount')
+  }
+  getPlayGroundApprovalCount():Observable<any>{
+    return this.http.get(this.apiStatisticsUrl + 'GetPlayGroundApprovalCount')
+  }
+  getUsersCount():Observable<any>{
+    return this.http.get(this.apiStatisticsUrl + 'GetUsersCount')
+  }
+  getOwnersCount():Observable<any>{
+    return this.http.get(this.apiStatisticsUrl + 'GetOwnersCount')
+  }
+  ownerSearch(search:string):Observable<any>{
+    return this.http.get(this.apiAdminUrl + 'OwnerSearch/'+search)
+  }
+  userSearch(search:string):Observable<any>{
+    return this.http.get(this.apiAdminUrl + 'UserSearch/'+search)
+  }
+  blockedOwnerSearch(search:string):Observable<any>{
+    return this.http.get(this.apiAdminUrl + 'BlockedOwnerSearch/'+search)
+  }
+  
 }
