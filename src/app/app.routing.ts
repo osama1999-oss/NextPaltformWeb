@@ -5,6 +5,7 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { IconsComponent } from './icons/icons.component';
 
 const routes: Routes =[
   
