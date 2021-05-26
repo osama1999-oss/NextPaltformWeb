@@ -1,26 +1,61 @@
 <div class="main-content">
   <div class="container-fluid">
     <div class="content" *ngFor="let playGround of playGrounds; let i = index">
-   <div class="mat-elevation-z4 card-body">
-     <mat-card-header>
-       <h2>playground name:{{playGround.name}}</h2>
-     </mat-card-header>
-     <div class="flex-container">
-       <div>    <img mat-card-image src="http://localhost:12123/{{playGround.image[0]}}">
-       </div>
-       <div>
-         <mat-card-content >
-       <ul>
-         <li><h1>email: {{playGround.from}}</h1></li>
-         <li><h1>email: {{playGround.to}}</h1></li>
-         <li><h1>evening price:{{playGround.priceEvening}}</h1></li>
-         <li><h1>morning price:{{playGround.priceMorning}}</h1></li>
-         <li><h1>location:{{playGround.location}}</h1></li>
-       </ul>
-     </mat-card-content>
-       </div>
-     </div>
-   </div>
+      <div class="mat-elevation-z4 card-body">
+        <mat-card-header>
+          <h2>playground name:</h2>
+        </mat-card-header>
+        <div class="flex-container">
+          <div>    <img mat-card-image src="./../../assets/close-up-shot-soccer-field-sideline-made-synthetic-lawn-selective-focus-82883321.jpg" height="285" width="500">
+          </div>
+          <div >
+            <mat-card-content >
+          <ul style="margin-left: -30px;">
+            <li><h1>Status:</h1></li>
+            <li><h1>Rating:</h1></li>
+            <li><h1>Evening Price:</h1></li>
+            <li><h1>Morning Price:</h1></li>
+            <li><h1>Location:</h1></li>
+            <li><h1>Created Date:</h1></li>
+            
+          </ul>
+          
+        </mat-card-content>
+    
+          </div>
+          <div style="margin-left: 200px;">
+  
+            <div class="row ">
+              <h1 style="margin-left: -20px;">has water</h1>
+              <div> <i class="material-icons " style="color: darkblue; font-size: 30px; margin-bottom: 20px; margin-left: 23px;">water_drop</i></div>
+              </div >
+              <div class="row">
+                <h1 style="margin-left: -20px;">has ball</h1>
+                <div> <i class="material-icons " style=" font-size: 30px; margin-bottom: 20px; margin-left: 45px;">sports_soccer</i></div>
+                </div>
+                <div class="row ">
+                <h1 style="margin-left: -20px;">has shower</h1>
+  
+                  <div> <i class="material-icons "style=" font-size: 30px; margin-bottom: 20px; margin-left: 5px;" >shower</i></div>
+                  </div>
+                  <div class="row">
+                <h1 style="margin-left: -20px;">has garage</h1>
+  
+                    <div> <i class="material-icons " style="color: darkblue; font-size: 30px; margin-bottom: 20px; margin-left: 10px;">directions_car</i></div>
+                    </div>
+                    <div class="row ">
+                <h1 style="margin-left: -20px;">has loacker</h1>
+  
+                      <div> <i class="material-icons " style="color: darkblue; font-size: 30px;  margin-left: 5px; ">lock</i></div>
+                      </div>
+                    
+                        
+                         
+                            
+            </div>
+        </div>
+      </div>
+
  </div>
  
  </div>

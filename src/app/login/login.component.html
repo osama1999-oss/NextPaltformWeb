@@ -1,35 +1,37 @@
 
-<mat-toolbar color="primary" class="app-header">
-    <div><a href="https://www.positronx.io" target="_blank" class="positronx">mala3b</a></div>
-    <span class="nav-tool-items">
-      <a mat-button routerLink="" routerLinkActive="active">Log in</a>
-      
-    </span>
+<mat-toolbar style="background-color:#43a047" class="app-header">
+    <div>
+      <img src="../../assets/Icon - yellow Color.png" style="margin-top: -7px;" width="40">
+      <a  target="_blank" class="positronx" style="margin-left: 10px; font-size: 30px; " >Next</a>
+    </div>
+   
   </mat-toolbar>
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
 
     <mat-card class="box">
       <mat-card-header>
-        <mat-card-title>Log in</mat-card-title>
+        <div>
+          <img src="../../assets/Logo - Yellow Color.png" width="80">
+          
+        </div>
       </mat-card-header>
   
-      <form class="example-form">
-        <label for=""></label>
-          <input type="text"
-            class="form-control" name="carModel" id="carModel"
-             aria-describedby="hlpModel" [(ngModel)] = "name"   placeholder="">
-          <small id="hlpModel" class="form-text text-muted">Name </small>
+      <form class="example-form" (ngsubmit)="onlogin()" name="loginform" [formgroup]="loginform">
+        <mat-card-content>
+          <mat-form-field class="example-full-width" appearence="outline">
+            <input (keyup)="getvalue($event.target.value)" formcontrolname="email" matInput placeholder="Email">
+            
 
-          <label for=""></label>
-          <input type="text"
-            class="form-control" name="carModel" id="carModel"
-             aria-describedby="hlpModel" [(ngModel)]="password" placeholder="">
-          <small id="hlpModel" class="form-text text-muted">Password </small>
-        <button class="btn btn-primary" (click)="login()"  >
-          Save
-        </button>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width " appearence="outline">
+            <input (keyup)="getvalue($event.target.value)" formcontrolname="password" type="password" matInput placeholder="Password">
+            
+          
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button style="background-color: #43a047;height: 50px;text-align: center;" class="btn-block " routerLink="login" routerLinkActive="active" >Login</button>
       </form>
     </mat-card>
   
   </div>
-

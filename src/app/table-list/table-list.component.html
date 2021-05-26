@@ -1,3 +1,29 @@
+
+  <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top">
+    <div class="container-fluid">
+        
+        <button mat-raised-button class="navbar-toggler" type="button" (click)="sidebarToggle()">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <form class="navbar-form" style="margin-top: 20px;">
+                <div class="input-group no-border">
+                    <input type="text" value="" class="form-control" placeholder="Search...">
+                    <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
+                        <i class="material-icons">search</i>
+                        <div class="ripple-container"></div>
+                    </button>
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</nav>
+
+
 <div class="main-content">
    
     
@@ -7,14 +33,14 @@
       <div class="row">
           <div class="col-md-12">
               <div class="card">
-                  <div class="card-header card-header-danger">
-                      <h4 class="card-title ">Simple Table</h4>
-                      <p class="card-category"> Here is a subtitle for this table</p>
+                  <div class="card-header card-header-success">
+                      <h4 class="card-title ">Owner</h4>
+                      <p class="card-category"> here is table of owner's data</p>
                   </div>
                   <div class="card-body">
                       <div class="table-responsive">
                           <table class="table">
-                              <thead class=" text-primary">
+                              <thead class=" transparent">
                                   <th>
                                       ID
                                   </th>
