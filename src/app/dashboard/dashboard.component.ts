@@ -179,8 +179,8 @@ export class DashboardComponent implements OnInit {
   {
     
     var datawebsiteViewsChartSt = {
-      labels: [this.statusData[4].name, this.statusData[1].name, this.statusData[2].name, this.statusData[0].name],
-      series: [[this.statusData[4].value, this.statusData[1].value, this.statusData[2].value, this.statusData[0].value]],
+      labels: [this.statusData[3].name, this.statusData[1].name, this.statusData[2].name, this.statusData[0].name],
+      series: [[this.statusData[3].value, this.statusData[1].value, this.statusData[2].value, this.statusData[0].value]],
     };
     var optionswebsiteViewsChartSt = {
       axisX: {
@@ -219,6 +219,7 @@ export class DashboardComponent implements OnInit {
     this.adminServ.getPlayGroundStatusStatistics().subscribe(
       res=>{
         this.statusData = res;
+        console.log(this.statusData);
         this.getPlayGroundStatusStatisticsChart();
       }
     );
@@ -227,7 +228,9 @@ export class DashboardComponent implements OnInit {
   getPlayGroundsCount()
   {
     this.adminServ.getPlayGroundsCount().subscribe(
-      res=> this.PlayGroundsCount = res
+      res=> {this.PlayGroundsCount = res;
+    console.log(this.PlayGroundsCount)
+  }
     )
   }
   getPlayGroundApprovalCount()

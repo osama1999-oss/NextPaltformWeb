@@ -20,6 +20,7 @@ export class NotificationsComponent implements OnInit {
     this.adminServ.getPlayGrounds().subscribe(
       res=> {
         this.playGrounds = res;
+        console.log(this.playGrounds);
       }
     );
   }

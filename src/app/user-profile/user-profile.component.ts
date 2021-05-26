@@ -10,7 +10,8 @@ import { AdminServiceService } from 'app/shared/services/admin-service.service';
 export class UserProfileComponent implements OnInit {
   constructor( private adminServ:AdminServiceService) { }
   playGoundRequest = new PlayGroundRequest();
-    PlayGrounds:PlayGroundApprovalView[]
+    PlayGrounds:PlayGroundApprovalView[];
+    imageUrl= 'http://localhost:12123/';
       ngOnInit() {
           this.GetPlayGroundApprovalViewModel();
       }
