@@ -24,6 +24,17 @@ x:any;
       }
     );
   }
+  
+  onChangeEvent(event: any){
+    if(event.target.value == '')
+    {
+      this.getOwners();
+      return;
+    }
+    this.adminServ.ownerSearch(event.target.value).subscribe(
+      res => this.Owners = res
+    )
+  }
   onBlock(id:any){
     console.log(typeof(id));
     console.log(id);
