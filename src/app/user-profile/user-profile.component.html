@@ -6,8 +6,10 @@
       <h2>playground name:{{playGround.playGroundName}}</h2>
     </mat-card-header>
     <div class="flex-container">
-      <div>    <img mat-card-image src="./../../assets/close-up-shot-soccer-field-sideline-made-synthetic-lawn-selective-focus-82883321.jpg">
+      <div>  
+          <img mat-card-image src="http://localhost:12123/{{playGround.images[0]}}">
       </div>
+      {{imageUrl}}{{ playGround.images[0]}}
       <div>
         <mat-card-content >
       <ul>

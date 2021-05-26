@@ -7,5 +7,6 @@ ownerName:string;
 priceEvening:string;
 priceMorning:string;
 email:string;
+images :[] ;
 
 }
