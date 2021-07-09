@@ -1,10 +1,10 @@
 import { environment } from './../../../environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import{adminAuthenticationDto} from '../model/adminauthentication';
 import { PlayGroundRequest } from '../model/playGroundRequest';
-
+import 'rxjs/add/operator/catch';
 @Injectable({
   providedIn: 'root'
 })
@@ -47,8 +47,11 @@ export class AdminServiceService {
     console.log(request);
     return this.http.post(this.apiAdminUrl + 'PlaygroundApproval',request)
   }
+  // getPlayGrounds():Observable<any>{
+  //   return this.http.get(this.apiPlayGroundUrl + 'GetAllPlayGrounds')
+  // }
   getPlayGrounds():Observable<any>{
-    return this.http.get(this.apiPlayGroundUrl + 'GetAllPlayGrounds')
+    return this.http.get('http://osamahamdy-001-site1.htempurl.com/api/PlayGround/GetAllPlayGrounds')
   }
   getStatisticsOfReservations():Observable<any>{
     return this.http.get(this.apiStatisticsUrl + 'StatisticsOfReservations')

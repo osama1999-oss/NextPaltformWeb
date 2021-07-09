@@ -219,7 +219,7 @@ export class DashboardComponent implements OnInit {
     this.adminServ.getPlayGroundStatusStatistics().subscribe(
       res=>{
         this.statusData = res;
-        console.log(this.statusData);
+        console.log("status",this.statusData);
         this.getPlayGroundStatusStatisticsChart();
       }
     );
@@ -247,7 +247,7 @@ export class DashboardComponent implements OnInit {
   }
   getOwnersCount()
   {
-    this.adminServ.getUsersCount().subscribe(
+    this.adminServ.getOwnersCount().subscribe(
       res=> this.OwnersCount = res
     )
   }

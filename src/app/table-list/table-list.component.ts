@@ -26,6 +26,7 @@ x:any;
   }
   
   onChangeEvent(event: any){
+    console.log(event.target.value);
     if(event.target.value == '')
     {
       this.getOwners();

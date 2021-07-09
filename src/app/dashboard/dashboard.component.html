@@ -1,9 +1,8 @@
 <div class="main-content">
     <div class="container-fluid">
-        {{OwnersCount}}
-        {{UsersCount}}
-        {{PlayGroundApprovalCount}}
-        {{PlayGroundsCount}}
+        
+        
+       
         <div class="row">
 
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -13,8 +12,7 @@
                             <img src="../../assets/noun_football pitch_18784902.png" height="80" width="100">
                         </div>
                         <p class="card-category">playgrounds</p>
-                        <h3 class="card-title">49/50
-                            <small>GB</small>
+                        <h3 class="card-title"> {{PlayGroundsCount}}
                         </h3>
                     </div>
                     <div class="card-footer">
@@ -32,7 +30,7 @@
                             <img src="../../assets/noun_manager_1978588.png" height="80" width="100">
                         </div>
                         <p class="card-category">Owners</p>
-                        <h3 class="card-title">$34,245</h3>
+                        <h3 class="card-title">        {{OwnersCount}}          </h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
@@ -50,7 +48,7 @@
                             <img src="../../assets/noun_player_23000501.png" height="80" width="100">
                         </div>
                         <p class="card-category">users</p>
-                        <h3 class="card-title">75</h3>
+                        <h3 class="card-title">{{UsersCount}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
@@ -67,7 +65,7 @@
                             <img src="../../assets/noun_request_1215072.png" height="80" width="100">
                         </div>
                         <p class="card-category">New PlayGrounds</p>
-                        <h3 class="card-title">+245</h3>
+                        <h3 class="card-title">{{PlayGroundApprovalCount}}</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
@@ -79,4 +77,57 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-success">
+                        <div class="ct-chart" id="dailySalesChart"></div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Daily Reservations</h4>
+                        <p class="card-category">
+                            <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span>Reservations throughout the week.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats"> 
+                            <i class="material-icons">access_time</i> updated 4 minutes ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-warning">
+                        <div class="ct-chart" id="websiteViewsChart"></div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">PlayGround Reseravtion</h4>
+                        <p class="card-category">The four most booked PlayGrounds</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">access_time</i> campaign sent 2 days ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-danger">
+                        <div class="ct-chart" id="websiteViewsChartSt"></div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">PlayGround Satatus</h4>
+                        <p class="card-category">All PlayGround Status</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">access_time</i> campaign sent 2 days ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
   

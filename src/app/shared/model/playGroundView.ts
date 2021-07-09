@@ -11,7 +11,8 @@ hasWater:boolean;
 hasGarag:boolean;
 hasLoacker:boolean;
 hasShower:boolean;
-hasToilet:boolean;
+hasToilet:boolean;  
 rating:number;
 status:string;
+image:[]
 }

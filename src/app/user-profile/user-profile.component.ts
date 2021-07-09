@@ -20,7 +20,9 @@ export class UserProfileComponent implements OnInit {
         this.adminServ.getPlayGroundApprovalView().subscribe(
           res=> {
             this.PlayGrounds = res;
+
             console.log(this.PlayGrounds);
+            console.log(this.PlayGrounds[0].images);
           }
         );
       }

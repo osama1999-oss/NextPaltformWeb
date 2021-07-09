@@ -1,7 +1,7 @@
 export class owners{
 id:string;
 name:string;
-location:string;
+address:string;
 status:string;
 imagePath:string;
 email:string;

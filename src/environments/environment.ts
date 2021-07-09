@@ -5,5 +5,7 @@
 
 export const environment = {
   production: false,
-  myApi:'http://localhost:12123/api/'
+ // myApi:'http://localhost:12123/api/' local
+  myApi:'http://osamahamdy-001-site1.htempurl.com/api/' // production
 };
+ 

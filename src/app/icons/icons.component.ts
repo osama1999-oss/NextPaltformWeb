@@ -23,4 +23,15 @@ getUsers()
     }
   );
 }
+onChangeEvent(event: any){
+  console.log(event.target.value);
+  if(event.target.value == '')
+  {
+    this.getUsers();
+    return;
+  }
+  this.adminServ.userSearch(event.target.value).subscribe(
+    res => this.Users = res
+  )
+}
 }

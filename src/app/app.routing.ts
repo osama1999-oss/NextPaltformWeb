@@ -6,23 +6,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { IconsComponent } from './icons/icons.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes =[
   
     {path:'',component:LoginComponent},
   
-  {
-    path: 'login',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, {
+   {
     path: '',
     component: AdminLayoutComponent,
     children: [{
       path: '',
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
     }]
-  }
+  },
+  { path: 'dashboard', component: DashboardComponent} 
+
 ];
 
 @NgModule({

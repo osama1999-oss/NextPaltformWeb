@@ -3,20 +3,21 @@
    <div class="content" *ngFor="let playGround of PlayGrounds; let i = index">
     <div class="mat-elevation-z4 card-body">
       <mat-card-header>
-        <h2>playground name:</h2>
+        <h2>playground name:{{playGround.playGroundName}}</h2>
       </mat-card-header>
       <div class="flex-container">
-        <div>    <img mat-card-image src="../../assets/img/sidebar-1.jpg" height="285" width="500">
+        <div>   
+           <img mat-card-image src="http://localhost:12123/{{playGround.images[0]}}" height="285" width="500">
         </div>
         <div>
           <mat-card-content >
         <ul>
-          <li><h1>Owner Name:</h1></li>
-          <li><h1>Category Name:</h1></li>
-          <li><h1>Email:</h1></li>
-          <li><h1>Evening price:</h1></li>
-          <li><h1>Morning price:</h1></li>
-          <li><h1>location:</h1></li>
+          <li><h1>Owner Name:{{playGround.ownerName}}</h1></li>
+          <li><h1>Category Name:{{playGround.playGroundCategoryName}}</h1></li>
+          <li><h1>Email:{{playGround.email}}</h1></li>
+          <li><h1>Evening price:{{playGround.priceEvening}}</h1></li>
+          <li><h1>Morning price:{{playGround.priceMorning}}</h1></li>
+          <li><h1>location:{{playGround.location}}</h1></li>
         </ul>
         
       </mat-card-content>
@@ -25,8 +26,8 @@
         </div>
         <div>
           <mat-card-actions>
-            <button mat-raised-button  class="button button1" >Cancel</button>
-            <button mat-raised-button class="button button2" >Approve</button>
+            <button mat-raised-button (click)="onCancle(playGround.playGroundId)"  class="button button1" >Cancel</button>
+            <button mat-raised-button (click)="onApprove(playGround.playGroundId)" class="button button2" >Approve</button>
            
           </mat-card-actions>
         </div>

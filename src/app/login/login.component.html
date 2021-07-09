@@ -1,12 +1,12 @@
 
-<mat-toolbar style="background-color:#43a047" class="app-header">
+<mat-toolbar style="background-color:#002B31" class="app-header">
     <div>
       <img src="../../assets/Icon - yellow Color.png" style="margin-top: -7px;" width="40">
       <a  target="_blank" class="positronx" style="margin-left: 10px; font-size: 30px; " >Next</a>
     </div>
    
   </mat-toolbar>
-<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+<div class="login-wrapper" style="background-image: url(../../assets/img/fachry-zella-devandra-3sV_HuCgy70-unsplash.jpg); background-size: cover;"  fxLayout="row" fxLayoutAlign="center center">
 
     <mat-card class="box">
       <mat-card-header>
@@ -16,21 +16,21 @@
         </div>
       </mat-card-header>
   
-      <form class="example-form" (ngsubmit)="onlogin()" name="loginform" [formgroup]="loginform">
+      <form class="example-form">
         <mat-card-content>
           <mat-form-field class="example-full-width" appearence="outline">
-            <input (keyup)="getvalue($event.target.value)" formcontrolname="email" matInput placeholder="Email">
-            
-
+            <input [(ngModel)]="name"    name="pp" matInput placeholder="Email">
+           
+ 
           </mat-form-field>
   
           <mat-form-field class="example-full-width " appearence="outline">
-            <input (keyup)="getvalue($event.target.value)" formcontrolname="password" type="password" matInput placeholder="Password">
+            <input [(ngModel)]="password"   name="o" type="password" matInput placeholder="Password">
             
           
           </mat-form-field>
         </mat-card-content>
-        <button mat-stroked-button style="background-color: #43a047;height: 50px;text-align: center;" class="btn-block " routerLink="login" routerLinkActive="active" >Login</button>
+        <button mat-stroked-button style="background-color: #002B31;height: 50px;text-align: center; color: white; " class="btn-block " (click)="login()"  >Login</button>
       </form>
     </mat-card>
   

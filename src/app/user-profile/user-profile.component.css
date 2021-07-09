@@ -19,3 +19,21 @@
  {
    background-color:white;
  }
+ .button
+ {
+   
+   margin-top: 120%;
+   height: 50px;
+   width: 120px;
+   color: white;
+ }
+ .button2
+ {
+  margin-left: 10px;
+  background-color: green;
+ }
+ .button1
+ {
+   
+   background-color: red;
+ }

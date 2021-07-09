@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top">
     <div class="container-fluid">
         
-        <button mat-raised-button class="navbar-toggler" type="button" (click)="sidebarToggle()">
+        <button mat-raised-button class="navbar-toggler" type="button" >
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -11,25 +11,19 @@
         <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <form class="navbar-form" style="margin-top: 20px;">
                 <div class="input-group no-border">
-                    <input type="text" value="" class="form-control" placeholder="Search...">
+                    <input type="text" value="" class="form-control" (input)="onChangeEvent($event)"  placeholder="Search...">
                     <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
                         <i class="material-icons">search</i>
                         <div class="ripple-container"></div>
                     </button>
                 </div>
             </form>
-           
         </div>
     </div>
 </nav>
 
-
 <div class="main-content">
    
-    
-    <input type="text" (input)="onChangeEvent($event)" />
-
-     
       <div class="row">
           <div class="col-md-12">
               <div class="card">
@@ -69,7 +63,7 @@
                                         {{owner.name}}
                                       </td>
                                       <td>
-                                        {{owner.location}}
+                                        {{owner.address}}
                                       </td>
                                       <td>
                                         {{owner.status}}

@@ -24,6 +24,17 @@ export class TypographyComponent implements OnInit {
       }
     );
   }
+  onChangeEvent(event: any){
+    console.log(event.target.value);
+    if(event.target.value == '')
+    {
+      this.getBlokedOwners();
+      return;
+    }
+    this.adminServ.blockedOwnerSearch(event.target.value).subscribe(
+      res => this.Owners = res
+    )
+  }
   onUnBlock(id:any){
     console.log(typeof(id));
     console.log(id);

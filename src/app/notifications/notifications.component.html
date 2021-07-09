@@ -3,20 +3,21 @@
     <div class="content" *ngFor="let playGround of playGrounds; let i = index">
       <div class="mat-elevation-z4 card-body">
         <mat-card-header>
-          <h2>playground name:</h2>
+          <h2>playground name:{{playGround.name}}</h2>
         </mat-card-header>
         <div class="flex-container">
-          <div>    <img mat-card-image src="./../../assets/close-up-shot-soccer-field-sideline-made-synthetic-lawn-selective-focus-82883321.jpg" height="285" width="500">
+          <div>    <img mat-card-image src="http://localhost:12123/{{playGround.image[0]}}" height="285" width="500">
           </div>
           <div >
             <mat-card-content >
           <ul style="margin-left: -30px;">
-            <li><h1>Status:</h1></li>
-            <li><h1>Rating:</h1></li>
-            <li><h1>Evening Price:</h1></li>
-            <li><h1>Morning Price:</h1></li>
-            <li><h1>Location:</h1></li>
-            <li><h1>Created Date:</h1></li>
+            <li><h1 style="color: #43a047;">Status:  {{playGround.status}}</h1></li>
+            <li><h1>Rating: {{playGround.rating}}</h1></li>
+            <li><h1>Evening Price:  {{playGround.priceEvening}}  EGP </h1></li>
+            <li><h1>Morning Price:  {{playGround.priceMorning}}  EGP </h1></li>
+            <li><h1>Location:  {{playGround.location}}</h1></li>
+            <li><h1>From:  {{playGround.from}} AM</h1></li>
+            <li><h1>To:  {{playGround.to}} PM</h1></li>
             
           </ul>
           
@@ -27,27 +28,33 @@
   
             <div class="row ">
               <h1 style="margin-left: -20px;">has water</h1>
-              <div> <i class="material-icons " style="color: darkblue; font-size: 30px; margin-bottom: 20px; margin-left: 23px;">water_drop</i></div>
+              <div> <i class="material-icons " [ngStyle]="{'color':playGround.hasWater === true ? 'darkblue' : '' }" style=" font-size: 30px; margin-bottom: 20px; margin-left: 23px;">water_drop</i></div>
               </div >
               <div class="row">
                 <h1 style="margin-left: -20px;">has ball</h1>
-                <div> <i class="material-icons " style=" font-size: 30px; margin-bottom: 20px; margin-left: 45px;">sports_soccer</i></div>
+                <div> <i class="material-icons "[ngStyle]="{'color':playGround.hasBall === true ? 'darkblue' : '' }" style=" font-size: 30px; margin-bottom: 20px; margin-left: 45px;">sports_soccer</i></div>
                 </div>
                 <div class="row ">
                 <h1 style="margin-left: -20px;">has shower</h1>
   
-                  <div> <i class="material-icons "style=" font-size: 30px; margin-bottom: 20px; margin-left: 5px;" >shower</i></div>
-                  </div>
+                  <div> <i class="material-icons " [ngStyle]="{'color':playGround.hasShower === true ? 'darkblue' : '' }"style=" font-size: 30px; margin-bottom: 20px; margin-left: 5px;" >shower</i></div>
+                 {{playGround.Shower}}
+                </div>
                   <div class="row">
                 <h1 style="margin-left: -20px;">has garage</h1>
   
-                    <div> <i class="material-icons " style="color: darkblue; font-size: 30px; margin-bottom: 20px; margin-left: 10px;">directions_car</i></div>
+                    <div> <i class="material-icons " [ngStyle]="{'color':playGround.hasGarag === true ? 'darkblue' : '' }" style="  font-size: 30px; margin-bottom: 20px; margin-left: 10px;">directions_car</i></div>
                     </div>
                     <div class="row ">
-                <h1 style="margin-left: -20px;">has loacker</h1>
+                <h1 style="margin-left: -20px;">has loacker</h1>  
   
-                      <div> <i class="material-icons " style="color: darkblue; font-size: 30px;  margin-left: 5px; ">lock</i></div>
+                      <div> <i class="material-icons " [ngStyle]="{'color':playGround.hasLoacker === true ? 'darkblue' : '' }" style="  font-size: 30px;  margin-left: 5px; ">lock</i></div>
                       </div>
+                      <div class="row ">
+                        <h1 style="margin-left: -20px;">has Tolilte</h1>  
+          
+                              <div> <i class="material-icons " [ngStyle]="{'color':playGround.hasToilet === true ? 'darkblue' : '' }" style="  font-size: 30px;  margin-left: 20px; ">wash</i></div>
+                              </div>
                     
                         
                          
